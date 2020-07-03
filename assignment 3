@@ -1,0 +1,35 @@
+drop table employee;
+Drop table salary;
+
+
+CREATE TABLE employee 
+(
+ EMPLOYEEID NUMBER CONSTRAINT EMPID primary key,
+ EMPLOYEENAME VARCHAR2(20) NOT NULL,
+ EMPLOYEEADDRESS VARCHAR2(20) CONSTRAINT EMPADD check ( EMPLOYEEADDRESS  IN ('Newyork','London','Paris')),
+ SALARY NUMBER CONSTRAINT EMPSAL check ( salary between 20000 and 30000),
+ COMPANYADDRESS varchar2(20) default 'ASV Suntech Park'
+)
+INSERT INTO employee values(12, 'neha', 'London',20000,default)
+INSERT INTO employee values(11, 'sneha', 'London',20000,default)
+INSERT INTO salary values (11,1000,2000)
+INSERT INTO salary values (12,1000,2000)
+
+
+
+create table SALARY
+(
+     EmployeeID number ,
+     EmployeePF number ,
+     EmployeeHRA number ,
+     CONSTRAINT FKPID FOREIGN KEY (EmployeeID ) REFERENCES EMPLOYEE(EmployeeID ),
+     CONSTRAINT EMPF check ( EmployeePF > 0),
+     CONSTRAINT EMHRA check ( EmployeeHRA > 0)
+)
+
+select * from employee;
+
+
+select * from salary;
+
+
