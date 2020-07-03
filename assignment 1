@@ -1,0 +1,21 @@
+CREATE Table employee
+(EmployeeID number(6) NOT NULL,
+EmployeeName varchar2(20),
+EmployeeAddress varchar2(30),
+DOB date NOT NULL,
+DOJ  date default sysdate,
+Salary number(8)
+);
+
+INSERT INTO employee values( 1, 'David', 'Chennai',' 07/04/1999 ', default , null);
+
+INSERT INTO employee values( 2, 'Devi', 'Bangalore',' 10/09/1999 ', '10/09/2001' , 4500);
+
+
+INSERT INTO employee values( 3, 'Neha', 'Krishnagiri',' 06/04/1999 ', default , null);
+
+INSERT INTO employee values( 4, 'Sri', 'Hosur',' 12/06/1999 ', '06/11/2020' , 10000);
+
+INSERT INTO employee values( 5, 'Neena', 'Chennai',' 07/04/1999 ', default , null);
+select * from employee;
+
