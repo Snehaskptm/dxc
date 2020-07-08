@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class Passenger {
+
+	int pnrNumber;
+	String pnrName;
+	String journeyDate;
+	String source;
+	String destination;
+	
+	public void book() {
+		System.out.println("passenger "+ pnrName +" booked successfully ticket \n" );
+		
+	}
+	public void cancel() {
+		System.out.println("passenger "+ pnrName +" cancelled ticket \n" );
+	}
+	
+	public void modifyTicket() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.printf("enter passenger number:");
+		pnrNumber=sc.nextInt();
+		System.out.printf("enter passenger name:");
+		pnrName=sc.next();
+		System.out.printf("enter passenger journey date:");
+		journeyDate=sc.next();
+		System.out.printf("enter passenger source:");
+		source=sc.next();
+		System.out.printf("enter passenger destination:");
+		destination=sc.next();
+	}
+	public void displayTicketDetails() {
+		System.out.printf("===============passenger details========");
+		System.out.printf("\n");
+		System.out.printf("\n  passenger number is :"+pnrNumber);
+		System.out.printf("\n passenger name is :"+pnrName);
+		System.out.printf(" \n passenger source is :"+source);
+		System.out.printf(" \n passenger destination is :"+destination);
+		
+		}
+	
+	
+	public static  void main(String[] args ) {
+                      Passenger p = new Passenger();
+                          p.modifyTicket();
+		                      p.book();
+		                      p.cancel();
+	                        p.displayTicketDetails();
+		
+		}
+}
