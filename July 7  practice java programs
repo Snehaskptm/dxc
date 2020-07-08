@@ -1,0 +1,197 @@
+public class Customer {
+
+ public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  System.out.println("Customer name");
+  System.out.println("Customer Id");
+  System.out.println("Customer Addr");
+
+ }
+
+}
+==========================================================================================
+public class Assignmnets {
+ 
+ byte sno;
+ short num;
+ int mark;
+ long income;
+ char name;
+ float less;
+ double ohno;
+ boolean yeah;
+ 
+ public void values() {
+  System.out.println("default value for bytes is : "+sno);
+  System.out.println("default value for short is : "+num);
+  System.out.println("default value for int is : "+mark);
+  System.out.println("default value for long is : "+income);
+  System.out.println("default value for char is : "+name);
+  System.out.println("default value for float is : "+less);
+  System.out.println("default value for doule is : "+ohno);
+  System.out.println("default value for boolean is : "+yeah);
+  }
+
+ public static void main(String[] args) {
+  Assignmnets a = new Assignmnets() ;
+  a.values();
+ }
+
+}
+===================================================
+================================
+
+public class VariableDemo {
+
+
+		// TODO Auto-generated method stub
+     byte roll=46;
+     short salary=9000;
+     int grade=500;
+     long budget=5000l;
+     float marks=9.6f;
+     char alphabet='h';
+     double amount=345.98d;
+     boolean married=true;
+     String name="sneha";
+     public void display()
+     {
+    	 System.out.println("default value for byte is:"+roll);
+    	 System.out.println("default value for short is:"+salary);
+    	 System.out.println("default value for int is:"+grade);
+    	 System.out.println("default value for long is:"+budget);
+    	 System.out.println("default value for char is:"+alphabet);
+    	 System.out.println("default value for double is:"+amount);
+    	 System.out.println("default value for boolean is:"+married);
+    	 System.out.println("default value for String is:"+name);
+	}
+   public static void main(String[] args)
+   {
+	   VariableDemo vd = new  VariableDemo();
+	   vd.display();
+   }
+}
+
+==================
+import java.util.Scanner;
+
+public class ReadProgram {
+
+	Scanner sc = new Scanner(System.in);
+	int employeeAge=0;
+	String employeeName;
+	
+	public void display()
+	{
+		System.out.println("please enter your age:");
+		employeeAge =sc.nextInt();
+		
+		System.out.println("please enter your name:");
+		employeeName =sc.next();
+		
+		System.out.println(employeeName+" your age is "+employeeAge);		
+
+	}
+	
+
+	
+	public static void main(string[] args)
+	{
+		ReadProgram r = new ReadProgram();
+		r.display();
+		
+		
+	}
+	
+	
+}
+======================
+
+import java.util.Scanner;
+public class numbers {
+ 
+ Scanner sc = new Scanner(System.in);
+ int num1,num2,result;
+ 
+ public void num()
+ {
+  System.out.print("Enter first number : ");
+  num1 = sc.nextInt();
+  System.out.print("Enter second number : ");
+  num2 = sc.nextInt();
+  result = num1+num2;
+  System.out.println("Result is : "+result);
+  
+ }
+ public static void main(String[] args) {
+  numbers n = new numbers();
+  n.num();
+
+ }
+=======================================================
+import java.util.Scanner;
+public class AddNumbers 
+{
+ Scanner sc = new Scanner(System.in);
+ int num1, num2, result;
+  public void sumNumbers()
+  {
+   System.out.print("Enter first number: ");
+   num1 = sc.nextInt();
+   System.out.println("Enter second number: ");
+   num2 = sc.nextInt();
+   result = num1 + num2;
+   System.out.print("Result is:"+result);
+   System.out.println("Result is: "+num1+"+"+num2+"="+result);
+  }
+
+ public static void main(String[] args) {
+  AddNumber a = new AddNumber();
+  a.display();
+
+ }
+ 
+ }
+ }
+ ===================================================================================================
+ ----------------
+System.out.print("Enter the first number:");
+  a = sc.nextInt();
+  System.out.print("Enter the second number:");
+  b = sc.nextInt();
+  System.out.println("Result is:"+(a+b));
+====================================================
+public class DemoOperator {
+
+ int num1=100;
+ int num2=200;
+ public void display() {
+  num2 = num1 + 20;
+  num1 = ++num2;
+  System.out.println(--num1);
+  System.out.println(num2++);
+  System.out.println(num1+num2);
+ }
+ public static void main(String[] args) {
+  DemoOperator d = new DemoOperator();  
+  d.display();  
+ }
+}
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
