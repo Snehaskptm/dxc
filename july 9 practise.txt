@@ -1,0 +1,351 @@
+
+
+
+public class Employee {
+	
+	int empid=100;
+	String empname="sneha";
+	//constructor overloading
+	//default constructor
+	public Employee() {
+		System.out.println("CONS1 CALLED");
+		empid=200;
+		empname="SARAVANAN";
+		}
+	//Parameterized constructor
+	public  Employee(int empid,String empname) {
+		System.out.println("CONS2 CALLED");
+		this.empid=empid;
+		this.empname=empname;
+		}
+	public void display() {
+		System.out.println("employee id :"+empid);
+		System.out.println("employee name :"+empname);
+		
+	}
+		
+public static void main(String[] args) {
+	Employee e1=new Employee();
+	Employee employee =new Employee(99,"sri");
+	e1.display();
+	employee.display();
+	
+	
+}
+}
+
+
+
+
+=======================================================================
+public class Employee2 {
+	
+	int empid=100;
+	String empname="sneha";
+	//constructor
+	public Employee2() {
+		System.out.println("CONS CALLED");
+		empid=200;
+		empname="SARAVANAN";
+		}
+	public void display() {
+		System.out.println("employee id:"+empid);
+		System.out.println("employee name:"+empname);
+		}
+	
+	
+public static void main(String[] args) {
+	Employee2 e=new Employee2();
+	e.display();
+	
+	
+}
+}
+
+
+
+
+
+=========================================================================
+
+public class Mydemo {
+	
+	int num;
+	{
+		num=10;
+		System.out.println("DXC-BANGALORE");
+	}
+	
+	public void display() {
+		Mydemo m=new Mydemo();
+		System.out.println("hii");
+	}
+	
+	public void bye() {
+		System.out.println("bye");
+	}
+	
+	public static void main(String[] args) {
+		
+      // TODO Auto-generated method stub
+		System.out.println("Hello");
+		Mydemo m=new Mydemo();
+		m.display();
+		m.bye();
+	}
+	{
+		System.out.println("thanks");
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+======================================================================
+public class Demo4 {
+
+	public void d1() {
+		System.out.println("d1 called");
+	}
+	public void d2() {
+		System.out.println("d2 called");
+	}
+	public static void display() {
+		System.out.println("DISPLAY of DEMO4 CALLED");
+	}
+		 	 	 
+	
+	 
+	 public static void main(String[] args) {
+		 System.out.println("MAIN CALLED");
+		 Demo4 d=new Demo4();
+		 d.d2();
+		 display();
+		 d.display();
+		 
+	 }
+	 
+}
+
+
+
+
+
+
+
+==============================================================================================
+//static methods can only static variables ...and directly can access
+public class Demo3 {
+
+	int num1=100;
+	int num2=200;
+	 public    void  display() {
+		 System.out.println("num1:"+num1);
+		 System.out.println("num2:"+num2);
+		 System.out.println();
+		 }
+	 public static void d1() {
+		 System.out.println("hi from d1");
+	 }
+	 
+	 public void change() {
+		 num2++;
+		 
+	}
+	 
+	 public static void main(String[] args) {
+		 System.out.println("D1 object values");
+		 Demo3 d1= new Demo3();
+		 Demo3 d2= new Demo3();
+		 
+		 d1.display();
+		 d1.change();
+		 d1.display();
+		 System.out.println("D2 object values");
+		 d2.display();
+		 
+		 d1();
+		 Demo3.d1();
+		 
+		 
+		 
+	 }
+	 
+}
+
+
+
+
+
+==========================================================================
+public class Demo2 {
+
+	int num1=100;
+	int num2=200;
+	 public void display() {
+		 System.out.println("num1:"+num1);
+		 System.out.println("num2:"+num2);
+		 
+		 }
+	 
+	 public void change() {
+		 num2++;
+		 
+	}
+	 
+	 public static void main(String[] args) {
+		 System.out.println("D1 object values");
+		 Demo2 d1= new Demo2();
+		 Demo2 d2= new Demo2();
+		 
+		 d1.display();
+		 d1.change();
+		 d1.display();
+		 System.out.println("D2 object values");
+		 d2.display();
+		 
+	 }
+	 
+}
+
+
+
+
+
+===============================================================================================
+public class ArrayDemo {
+	
+	int marks[]=new int[5];
+	String names[]= {"sneha","ravi","rahul","teja","king", "raja","rani"};
+	
+	public void display()
+	{
+		marks[3]= 90;
+		
+		System.out.println(("print all the marks"));
+		System.out.println(marks[0]);
+		System.out.println(marks[1]);
+		System.out.println(marks[2]);
+		System.out.println(marks[3]);
+		System.out.println(marks[4]);
+		
+		System.out.println(" calling  the names");
+		
+		for (int i=0;i<5;i++)
+		{
+			System.out.println(names[i]);
+		}
+		
+		System.out.println(" calling all the names");
+		
+		for (int i=0;i<marks.length;i++) {
+		System.out.println(names[i]);
+	}
+		
+	}
+	
+  public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayDemo a = new ArrayDemo();
+		a.display();
+
+	}
+
+}
+
+
+
+=======================================================================================
+import java.util.Scanner;
+
+public class Agedemo {
+
+	int age=40;
+	public void accept() {
+		int age=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("please enter your age");
+		age=sc.nextInt();
+		
+		System.out.println(" Age entered by you is :"+age);
+		System.out.println("Age limit is:"+this.age);
+	}
+	
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Agedemo c=new Agedemo();
+        c.accept();
+	}
+
+}
+
+=======================================================================
+// function overloading
+public class AddNumbers {
+	
+	public void sum(int num1,int num2) {
+		System.out.println("sum of two numbers are:"+(num1+num2));
+	}
+	public void sum(int num1,int num2,int num3) {
+		System.out.println("sum of three numbers are:"+(num1+num2+num3));
+	}
+	public void sum(int num1,int num2,int num3, int num4) {
+		System.out.println("sum of four numbers are:"+(num1+num2+num3+num4));
+	}
+	
+	public static void main(String[] args) {
+		AddNumbers a=new AddNumbers();
+		a.sum(20,50);	
+	}
+
+}
+======================================================================================
+import java.util.Scanner;
+
+public class ConstDemo {
+ 
+ int id = 100;
+ String name = "Abishek";
+
+ public ConstDemo() {
+
+  System.out.println("from ConstDemo");
+  id = 200;
+  name = "ball";
+ }
+
+ public ConstDemo(int id, String name) {
+
+  System.out.println("from ConstDemo");
+  this.id = id;
+  this.name = name;
+ }
+
+ public void disp() {
+  System.out.println("helllo from display");
+  System.out.println(" a : " + id);
+  System.out.println("name : " + name);
+ }
+
+ public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Hi abishek, please enter number and string");
+  int i = sc.nextInt();
+  String n = sc.next();
+  ConstDemo x = new ConstDemo();
+  ConstDemo x2 = new ConstDemo(i, n);
+  x.disp();
+  x2.disp();
+ }
+}
+
+}
