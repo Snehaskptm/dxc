@@ -1,0 +1,270 @@
+package friday;
+
+class Animal {
+	
+	int age=10;
+	public void eat() {
+		System.out.println("dog should eat");
+	}
+}
+
+class Dog extends Animal{
+	int age=100;
+	public void display() {
+		System.out.println("the dog age is: "+age);
+		System.out.println("the dog age is: "+this.age);
+		System.out.println("the dog age is: "+super.age);
+	}
+	public void eat() {
+		super.eat();
+			System.out.println("dog eats meat");
+		}
+	
+	
+}
+
+
+public class Inheritdemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog d= new Dog();
+		d.display();
+		d.eat();
+		
+
+	}
+
+}
+======================================================================================================
+package friday;
+
+public class Stringbufferdemo {
+
+	public static void main(String[] args) {
+		StringBuffer name=new StringBuffer("sneha");
+		name.append(" s");
+       System.out.println(name);
+	}
+
+}
+===============================================================================
+package friday;
+
+public class Stringbuilderdemo {
+
+	public static void main(String[] args) {
+		StringBuffer name=new StringBuffer("sneha");
+		name.append(" s");
+       System.out.println(name);
+	}
+
+}
+========================================================================================
+package friday;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name="sneha";
+		
+	  System.out.println(name.concat("s"));
+		System.out.println(name);
+		 System.out.println(name.concat(" ece"));
+		name= "Saravanan";
+		
+	 System.out.println(name);
+
+	}
+
+}
+=========================================================================================
+package friday;
+
+public class Student2 {
+	
+	private static final char[] hashcode = null;
+	private int stuid;
+	private String stutName;
+	private int marks;
+	private  String department;
+	
+	
+	public Student2() {
+		
+	}
+	
+	public Student2(int stuid, String stutName, int marks, String department) {
+		super();
+		this.stuid = stuid;
+		this.stutName = stutName;
+		this.marks = marks;
+		this.department = department;
+	}
+
+	/*public void display() {
+		System.out.println("student id is :"+stuid);
+		System.out.println("student name is :"+stutName);
+		System.out.println("student mark is :"+marks);
+		System.out.println("student departmnet is :"+department);
+		
+	}*/
+	
+	
+	
+	//@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((department == null) ? 0 : department.hashCode());
+		result = prime * result + marks;
+		result = prime * result + stuid;
+		result = prime * result + ((stutName == null) ? 0 : stutName.hashCode());
+		return result;
+	} 
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student2 other = (Student2) obj;
+		if (department == null) {
+			if (other.department != null)
+				return false;
+		} else if (!department.equals(other.department))
+			return false;
+		if (marks != other.marks)
+			return false;
+		if (stuid != other.stuid)
+			return false;
+		if (stutName == null) {
+			if (other.stutName != null)
+				return false;
+		} else if (!stutName.equals(other.stutName))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [stuid=" + stuid + ", stutName=" + stutName + ", marks=" + marks + ", department=" + department
+				+ "]";
+	}
+	
+
+	public static void main(String[] args) {
+		
+	     Student2 s=new Student2 (12,"sneha",99,"ece");
+		 Student2 s1 =new Student2 (14,"Neha",99,"cse");
+		 Student2 s2 =new Student2 (16,"Isha",99,"cse");
+		 s =s2;
+		
+		System.out.println(s);
+		System.out.println(s1);
+		System.out.println(s2);
+		
+		//System.out.println(s==s1);
+	//	System.out.println(s1==s2);
+		//System.out.println(s==s2);
+		
+	  System.out.println(s.equals(s1));
+		System.out.println(s.equals(s2));
+		System.out.println(s1.equals(s2));
+		
+		System.out.println(s.hashCode());
+		
+	}
+
+	
+}
+===============================================================================
+
+package friday;
+//Wrapper classes
+public class WrapperDemo {
+
+ public static void main(String[] args) {
+  String m= "12";
+  Integer i = Integer.parseInt(m);
+  System.out.println(i+10);
+  
+  Integer p = 10;
+  String str = String.valueOf(p);
+  System.out.println(str+9);
+ 
+ }
+}
+===================================================================
+package friday;
+
+public class Customer {
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public  Customer(String str) {
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Customer c=new Customer();
+	}
+
+}
+==============================================================================
+package friday;
+
+public class DemogarbageCollection {
+	
+
+	public void finalize() {
+		System.out.println("FINALIZE CALLED");
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       DemogarbageCollection demo1 =new DemogarbageCollection();
+       DemogarbageCollection demo2 =new DemogarbageCollection();
+       
+       System.out.println(" DemogarbageCollection called");
+       demo1 =null;
+       demo2 =null;
+       System.gc(); 
+       
+       
+	}
+
+}
+===================================================================================
+package friday;
+
+public class Customer {
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public  Customer(String str) {
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Customer c=new Customer();
+	}
+
+}
+
+	
+
