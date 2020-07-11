@@ -1,0 +1,85 @@
+public class Calculator {
+	//----both int data type
+	public void add(int num,int num1) {
+		System.out.println(num+num1);
+			}
+        public void diff(int num,int num1) {
+		System.out.println(num-num1);	
+	}
+        
+	public void mul(int num,int num1) {
+		System.out.println(num*num1);
+	}
+        
+	public void div(int num,int num1) {
+		System.out.println(num/num1);	
+	}
+	
+	//-----both double data type
+	public void add(double num,double num1 ) {
+		System.out.println(num+num1);
+	}
+        public void diff(double num,double num1) {
+		System.out.println(num-num1);
+        }
+        public void mul(double num,double num1) {
+		System.out.println(num*num1);			
+	}
+        public void div(double num,double num1) {
+		System.out.println(num/num1);	
+	}	
+	
+    //------- first int data type, second double data type 
+	public void add(int num,double num1 ) {
+		System.out.println(num+num1);
+	}
+
+        public void diff(int num,double num1) {
+		System.out.println(num-num1);	
+	}
+        public void mul(int num,double num1) {
+		System.out.println(num*num1);	
+	}
+        public void div(int num,double num1) {	
+		System.out.println(num/num1);	
+	}
+		
+/*------ first double data type, second  int data type*/
+	
+	public void add(double num,int num1 ) {
+		System.out.println(num+num1);
+	}
+	
+	public void diff(double num,int num1) {
+		System.out.println(num-num1);	
+	}
+	public void mul(double num,int num1) {
+		System.out.println(num*num1);	
+	}
+	public void div(double num,int num1) {
+		System.out.println(num/num1);	
+	}
+	
+	public static void main(String[] args) {
+		Calculator c=new Calculator();
+		c.add(4, 2);
+		c.diff(9,3);
+		c.mul(20,4);
+		c.div(200, 100);
+		
+		c.add(4.0, 2.0);
+		c.diff(9.0,3.0);
+		c.mul(20.0,4.0);
+		c.div(200.0, 100.0);
+		
+		c.add(4, 2.0);
+		c.diff(9,3.0);
+		c.mul(20,4.0);
+		c.div(200, 100.0);
+		
+		c.add(4.0, 2);
+		c.diff(9.0,3);
+		c.mul(20.0,4);
+		c.div(200.0, 100);	
+	}
+}
