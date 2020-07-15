@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<script>
+
+var today = new Date();
+var day = today.getDate();
+var lastDate=15;
+
+var billAmount=parseInt(prompt(" Enter the bill amount:"));
+document.write("<br/>today is"+today );
+document.write("<br/> last date to pay bill is :"+lastDate);
+document.write("<br/> bill paying on  :"+day );
+var latedays=(day-lastDate);
+if(day<lastDate)
+	  {
+	  
+	   document.write("<br/>your bill amont is:"+billAmount);
+	  }
+else
+	  {
+	  document.write("<br/>Original bill"+"+"+"fine is ="+(latedays*50+billAmount));
+	  }
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
